@@ -5,18 +5,19 @@ document.getElementById('student-form').addEventListener('submit', function(even
     const data = {
         first_name: document.getElementById('first-name').value,
         last_name: document.getElementById('last-name').value,
-        birth_date: document.getElementById('birth-date').value,
+        date_of_birth: document.getElementById('birth-date').value,
         email: document.getElementById('email').value
     };
-
+    
     // Envia os dados usando o fetch para o servidor local
-    fetch('http://127.0.0.1:8000/students/new/', {
+    fetch('http://127.0.0.1:8000/students/create/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     })
+    console.log(data)
     .then(response => response.json())
     .then(data => {
         if (data.error) {
