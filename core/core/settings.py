@@ -37,8 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'teachers',
     'courses',
     'students',
+    'student_grades',
+    'interactions_student',
+    'activity_and_performance',
+    'assistent_preferences',
+    'educational_content',
+    'personal_feed',
+    'recommendations',
+    'school_work',
+
 ]
 
 MIDDLEWARE = [
@@ -49,8 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'core.urls'
